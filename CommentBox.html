@@ -16,16 +16,19 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="container" id="commentsection">
+            <div id="usercomments"></div>
+        </div>
         <div class="container">
-        <form id="cmntform" class="card">
+        <form id="cmntform" class="card" onsubmit="return false">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br>
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email"><br>
             <label for="comment"> Comment:</label> <br>
-            <textarea name="comment" id="comment" form="cmntform" placeholder="Write comment here..." oninput="myFunction()" status="valid"></textarea><br>
+            <textarea name="comment" id="comment" form="cmntform" placeholder="Write comment here..." oninput="myFunction()"></textarea><br>
             <p id="tracker">(0/140)</p>
-            <input id="submit" type="submit" value="Submit">
+            <input id="submit" name="submit" type="submit" value="Submit" onclick="handleSubmit()">
         </form>
         </div>
         <script src="commentBox.js" async defer></script>

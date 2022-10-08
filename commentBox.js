@@ -12,7 +12,16 @@ function myFunction() {
         tracker.style.color = "red"
         comment.style.background = "rgba(245, 149, 149, 0.5)"
     } else {
-
     }
+}
+
+function handleSubmit() {
+    const commentSection = document.getElementById("commentsection");
+    const userComments = document.getElementById("userComments");
+    const newDiv = document.createElement("div");
+    const comment = document.getElementById("comment");
+    newComment = document.createTextNode(comment.value);
+    newDiv.appendChild(newComment);
+    commentSection.insertBefore(newDiv, userComments);
 }
 
