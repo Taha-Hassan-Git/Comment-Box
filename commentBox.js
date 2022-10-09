@@ -1,6 +1,7 @@
 const comment = document.getElementById("comment");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
+newCommentData = {name:"", email:"", comment:""};
 
 function myFunction() {
     const commentLength = comment.value.length;
@@ -18,6 +19,12 @@ function myFunction() {
 }
 
 function handleSubmit() {
+    newCommentData.name = name.value;
+    newCommentData.email = email.value;
+    newCommentData.comment = comment.value;
+}
+ 
+/* function handleSubmit() {
     const commentSection = document.getElementById("commentsection");
     const userComments = document.getElementById("userComments");
     const newDiv = document.createElement("div");
@@ -31,4 +38,4 @@ function handleSubmit() {
     comment.value = ""
     myFunction()
 }
-
+ */

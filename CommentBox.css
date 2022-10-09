@@ -22,6 +22,10 @@ body {
     word-wrap: break-word;
 }
 
+#info {
+    font-size: 18px;
+}
+
 #newcomments {
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
