@@ -1,4 +1,6 @@
 const comment = document.getElementById("comment");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
 
 function myFunction() {
     const commentLength = comment.value.length;
@@ -11,6 +13,7 @@ function myFunction() {
         tracker.style.color = "red"
         comment.style.background = "rgba(245, 149, 149, 0.5)"
     } else {
+
     }
 }
 
@@ -19,10 +22,13 @@ function handleSubmit() {
     const userComments = document.getElementById("userComments");
     const newDiv = document.createElement("div");
     newComment = document.createTextNode(comment.value);
+    newName = document.createTextNode("/n" + name.value);
     newDiv.id = "newcomments"
     newDiv.classList.add("card");
     newDiv.appendChild(newComment);
+    newDiv.appendChild(newName);
     commentSection.insertBefore(newDiv, userComments);
     comment.value = ""
+    myFunction()
 }
 
