@@ -21,7 +21,10 @@ function handleSubmit() {
     const newDiv = document.createElement("div");
     const comment = document.getElementById("comment");
     newComment = document.createTextNode(comment.value);
+    newDiv.id = "newcomments"
+    newDiv.classList.add("card");
     newDiv.appendChild(newComment);
     commentSection.insertBefore(newDiv, userComments);
+    comment.value = ""
 }
 
