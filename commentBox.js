@@ -1,10 +1,9 @@
-
+const comment = document.getElementById("comment");
 
 function myFunction() {
-    const comment = document.getElementById("comment");
     const commentLength = comment.value.length;
     const tracker = document.getElementById("tracker");
-    tracker.innerHTML = "(" + commentLength.toString() + "/140)"
+    tracker.innerHTML = "(" + commentLength + "/140)"
     tracker.style.color = "black"
     comment.style.background = "white"
     if (commentLength > 140) {
@@ -19,7 +18,6 @@ function handleSubmit() {
     const commentSection = document.getElementById("commentsection");
     const userComments = document.getElementById("userComments");
     const newDiv = document.createElement("div");
-    const comment = document.getElementById("comment");
     newComment = document.createTextNode(comment.value);
     newDiv.id = "newcomments"
     newDiv.classList.add("card");
