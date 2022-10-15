@@ -56,4 +56,6 @@ function handleSubmit() {
     name.value = "";
     email.value = "";
     comment.value = "";
+    //this clears the character counter
+    myFunction();
 }
