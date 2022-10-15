@@ -1,6 +1,8 @@
 const comment = document.getElementById("comment");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
+const commentSection = document.getElementById("commentsection");
+const userComments = document.getElementById("userComments");
 newCommentData = {name:"", email:"", comment:""};
 
 function myFunction() {
@@ -18,24 +20,34 @@ function myFunction() {
     }
 }
 
+//it's still possible 
 function handleSubmit() {
+    //Taking data from the user input and putting them in an object
     newCommentData.name = name.value;
     newCommentData.email = email.value;
     newCommentData.comment = comment.value;
-}
- 
-/* function handleSubmit() {
-    const commentSection = document.getElementById("commentsection");
-    const userComments = document.getElementById("userComments");
+    //Creating the elements we need for the comment
     const newDiv = document.createElement("div");
-    newComment = document.createTextNode(comment.value);
-    newName = document.createTextNode("/n" + name.value);
+    const newName = document.createElement("h1");
+    const newEmail = document.createElement("h1");
+    const newComment = document.createElement("p");
+    //setting the text of the inputs to the relevant elements
+    newName.innerHTML = "Name: " + newCommentData.name;
+    newEmail.innerHTML = "Email: " + newCommentData.email;
+    newComment.innerHTML = newCommentData.comment;
+    //putting in the class and id fields for styling
     newDiv.id = "newcomments"
     newDiv.classList.add("card");
-    newDiv.appendChild(newComment);
+    newName.id = "info"
+    newName.classList.add("text");
+    newEmail.id = "info"
+    newEmail.classList.add("text");
+    newComment.id = "commenttext";
+    newComment.classList.add("text");
+    //appending elements to the div
     newDiv.appendChild(newName);
+    newDiv.appendChild(newEmail);
+    newDiv.appendChild(newComment);
+    //inserting them in the correct part of the document
     commentSection.insertBefore(newDiv, userComments);
-    comment.value = ""
-    myFunction()
 }
- */
