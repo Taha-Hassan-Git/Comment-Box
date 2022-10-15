@@ -3,6 +3,7 @@ const name = document.getElementById("name");
 const email = document.getElementById("email");
 const commentSection = document.getElementById("commentsection");
 const userComments = document.getElementById("userComments");
+const submitButton = document.getElementById("submit");
 newCommentData = {name:"", email:"", comment:""};
 
 function myFunction() {
@@ -11,17 +12,18 @@ function myFunction() {
     tracker.innerHTML = "(" + commentLength + "/140)"
     tracker.style.color = "black"
     comment.style.background = "white"
+    submitButton.disabled = false;
     if (commentLength > 140) {
         tracker.innerHTML += "<br> Woah! You're over the limit buddy!"
         tracker.style.color = "red"
         comment.style.background = "rgba(245, 149, 149, 0.5)"
+        submitButton.disabled = "disabled";
     } else {
 
     }
 }
 
-//it's still possible to submit a function that is over the 
-//text limit, and fields need to clear after input.
+//You can still submit without inputting anything.
 function handleSubmit() {
     //Taking data from the user input and putting them in an object
     newCommentData.name = name.value;
@@ -51,4 +53,7 @@ function handleSubmit() {
     newDiv.appendChild(newComment);
     //inserting them in the correct part of the document
     commentSection.insertBefore(newDiv, userComments);
+    name.value = "";
+    email.value = "";
+    comment.value = "";
 }
