@@ -20,7 +20,8 @@ function myFunction() {
     }
 }
 
-//it's still possible 
+//it's still possible to submit a function that is over the 
+//text limit, and fields need to clear after input.
 function handleSubmit() {
     //Taking data from the user input and putting them in an object
     newCommentData.name = name.value;
