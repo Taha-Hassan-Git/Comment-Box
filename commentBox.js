@@ -23,21 +23,17 @@ function myFunction() {
     }
 }
 
-//You can still submit without inputting anything.
+//You can still submit without inputting anything in Name and Email
 function handleSubmit() {
-    //Taking data from the user input and putting them in an object
-    newCommentData.name = name.value;
-    newCommentData.email = email.value;
-    newCommentData.comment = comment.value;
     //Creating the elements we need for the comment
     const newDiv = document.createElement("div");
     const newName = document.createElement("h1");
     const newEmail = document.createElement("h1");
     const newComment = document.createElement("p");
     //setting the text of the inputs to the relevant elements
-    newName.innerHTML = "Name: " + newCommentData.name;
-    newEmail.innerHTML = "Email: " + newCommentData.email;
-    newComment.innerHTML = newCommentData.comment;
+    newName.innerHTML = "Name: " + name.value;
+    newEmail.innerHTML = "Email: " + email.value;
+    newComment.innerHTML = comment.value;
     //putting in the class and id fields for styling
     newDiv.id = "newcomments"
     newDiv.classList.add("card");
