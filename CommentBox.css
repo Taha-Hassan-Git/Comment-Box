@@ -70,10 +70,10 @@ form {
 }
 
 #submit {
-    background-color: var(--color1);
+    background-color: var(--color4);
     border: 2px solid black;
     color: black;
-    padding: 5px 15px;
+    padding: 5px 8px;
     text-align: center;
     text-decoration: none;
     font-size: 25px;
@@ -87,10 +87,14 @@ form {
     -o-border-radius: 10%;
   }
   
-  #submit:hover {
-      background-color: var(--color4);
-      padding: 6px 16px;
-  }
+    #submit:hover:enabled {
+        background-color: var(--color4);
+        padding: 8px 17px;
+    }
+    #submit:disabled {
+        background-color: var(--color1);
+
+    }
 
 @media only screen and (max-width: 800px) {
     .card {
