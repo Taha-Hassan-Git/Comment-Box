@@ -8,6 +8,8 @@ newCommentData = {name:"", email:"", comment:""};
 
 function myFunction() {
     const commentLength = comment.value.length;
+    const nameLength = name.value.length;
+    const emailLength = email.value.length;
     const tracker = document.getElementById("tracker");
     tracker.innerHTML = "(" + commentLength + "/140)"
     tracker.style.color = "black"
@@ -18,12 +20,16 @@ function myFunction() {
         tracker.style.color = "red"
         comment.style.background = "rgba(245, 149, 149, 0.5)"
         submitButton.disabled = "disabled";
+    } else if (commentLength == 0 || nameLength == 0 || emailLength == 0) {
+        submitButton.disabled = "disabled"
+
     } else {
 
     }
 }
 
-//You can still submit without inputting anything in Name and Email
+//Could introduce a feature that warns users they have left blank fields
+//when they try and fail to submit a comment.
 function handleSubmit() {
     //Creating the elements we need for the comment
     const newDiv = document.createElement("div");
