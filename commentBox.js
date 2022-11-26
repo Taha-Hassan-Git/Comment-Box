@@ -58,6 +58,8 @@ function handleSubmit() {
     name.value = "";
     email.value = "";
     comment.value = "";
+    //scroll to newdiv
+    newDiv.scrollIntoView({behavior: "smooth", block: "end"})
     //this clears the character counter
     myFunction();
 }
