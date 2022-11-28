@@ -4,5 +4,4 @@ A page that appends comments to the document. [Deployed here](https://taha-hassa
 
 ## Summary
 
-The user can input a name, email, comment and submit. THe submit button is not activated until all three fields have an input. There is currently
-no regex on the name or email fields, unfortunately, something to add in future.
+The user can input a name, email, comment and submit. The submit button is not activated until all three fields have an input. After submitting a comment the new element is scrolled into view. There is currently no regex on the name or email fields, unfortunately, something to add in future.
